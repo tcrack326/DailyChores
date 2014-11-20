@@ -1,3 +1,7 @@
-## Yo, I'm a Readme
+## Daily Chores - Assignment 18 - An Angular Application
 
-You should probably update me so people looking at your code have an idea what it is being used for :)
+This is an application built with Angular for Assignment 18 at the Iron Yard.  It is a list of daily chores that resets each day.  Full CRUD operations are available.
+
+This application is using AngularJS, jQuery, and UnderscoreJS.
+
+Author: Thomas McCracken
