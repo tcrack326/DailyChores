@@ -3,11 +3,6 @@
   angular.module('ChoresList')
     .controller('SingleChoreController', ['choresFactory', '$scope', '$routeParams', '$rootScope', '$location', function (choresFactory, $scope, $routeParams, $rootScope, $location) {
 
-      choresFactory.getChore($routeParams.id).then(function (result){
-
-        $scope.chore = result;
-
-      });
 
   $scope.addChore = function (chore) {
             choresFactory.addChore(chore);
@@ -19,6 +14,12 @@
   }
 
   $scope.updateChore = function (chore) {
+    choresFactory.getChore($routeParams.id).then(function (result){
+
+      $scope.chore = result;
+
+    });
+    
     choresFactory.updateChore(chore);
 
     $rootScope.$on('chore:updated', function (){
