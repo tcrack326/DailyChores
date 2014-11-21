@@ -22,7 +22,7 @@
 
     $routeProvider.when('/add', {
       templateUrl: 'templates/add-template.html',
-      controller: 'SingleChoreController'
+      controller: 'AddChoreController'
     });
 
   });

@@ -36,7 +36,7 @@
 
   function deleteChore (chore) {
 
-  chore.delete().then( function (){
+  chore.remove().then( function (){
       //broadcast to the parent controller that the chore has been updated and redirect in the controller
       $rootScope.$broadcast('chore:deleted');
     });

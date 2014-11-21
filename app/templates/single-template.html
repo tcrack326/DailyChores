@@ -1,8 +1,8 @@
-<form ng-submit="updateChore(chore)"><br/>
+<form><br/>
 
   <span>Todo: </span><input ng-model="chore.title" placeholder="{{ chore.title }}" /><br/><br/>
-  <span>Time it Takes: </span><input ng-model="chore.time" placeholder="{{ chore.time }}" /><br/><br/>
+  <span>Time it Takes: </span><input ng-model="chore.time" placeholder="{{ chore.time }}"<span> minutes.</span><br/><br/>
 
-  <button>Update Chore</button>
+  <button ng-click="updateChore(chore)">Update Chore</button><button ng-click='deleteChore(chore)'>Remove Chore</button>
 
 </form>
