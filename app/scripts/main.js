@@ -5,6 +5,9 @@
   app.config( function ($routeProvider, RestangularProvider) {
 
     RestangularProvider.setBaseUrl('http://tiy-atl-fe-server.herokuapp.com/collections/');
+    RestangularProvider.setRestangularFields({
+      id: '_id'
+    });
 
 
     $routeProvider.when('/', {

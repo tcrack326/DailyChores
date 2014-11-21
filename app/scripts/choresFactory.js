@@ -28,9 +28,17 @@
 
   function updateChore (chore) {
 
-    allChores.put(chore).then( function (){
-      //broadcast to the parent controller that the chore has been added and redirect in the controller
+  chore.put().then( function (){
+      //broadcast to the parent controller that the chore has been updated and redirect in the controller
       $rootScope.$broadcast('chore:updated');
+    });
+  }
+
+  function deleteChore (chore) {
+
+  chore.delete().then( function (){
+      //broadcast to the parent controller that the chore has been updated and redirect in the controller
+      $rootScope.$broadcast('chore:deleted');
     });
   }
 
@@ -38,7 +46,9 @@
 
         getChores: getChores,
         getChore: getChore,
-        addChore: addChore
+        addChore: addChore,
+        updateChore: updateChore,
+        deleteChore: deleteChore
 
       };
 
