@@ -21,9 +21,9 @@
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body>
-
-    <div class="container">
+  <body ng-app="ChoresList">
+    <nav><a href="#/add">Add a Chore</a><nav>
+    <div ng-view>
 
     </div>
 
@@ -33,11 +33,17 @@
     <script src="../bower_components/underscore/underscore.js"></script>
     <script src="../bower_components/angular/angular.min.js"></script>
     <script src="../bower_components/angular-route/angular-route.min.js"></script>
+    <script src="../bower_components/restangular/dist/restangular.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script src="scripts/choresFactory.js"></script>
+        <script src="scripts/choresController.js"></script>
+        <script src="scripts/single-chore-controller.js"></script>
+        <script src="scripts/choresFactory.js"></script>
+
         <!-- endbuild -->
 </body>
 </html>
