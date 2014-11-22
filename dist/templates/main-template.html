@@ -1,0 +1,6 @@
+<ul>
+  <li ng-repeat="chore in chores">
+    <span cross-out class="{{ chore.complete}}">{{ chore.title }} - Time to complete: {{ chore.time}} minutes.</span>
+    <a href="#edit/{{ chore._id }}">Update</a>
+  </li>
+</ul>
