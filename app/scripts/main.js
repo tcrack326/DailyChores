@@ -27,5 +27,25 @@
 
   });
 
+  app.directive('crossOut', function () {
+    return {
+      link: function ($scope, element, attrs) {
+        element.bind('click', function () {
+          console.log(this);
+          //console.log(element.classlist);
+          if ($scope.complete === undefined) {
+            $scope.complete = 'complete';
+            element.addClass('completed');
+          }
+          else {
+            $(element).removeClass('completed');
+            $scope.complete = undefined;
+
+          }
+        });
+      }
+    }
+  });
+
 
 }());

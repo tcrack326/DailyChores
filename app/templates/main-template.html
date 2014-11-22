@@ -1,6 +1,6 @@
 <ul>
   <li ng-repeat="chore in chores">
-    {{ chore.title }} takes {{ chore.time}} minutes.
+    <span cross-out>{{ chore.title }} - Time to complete: {{ chore.time}} minutes.</span>
     <a href="#edit/{{ chore._id }}">Update</a>
   </li>
 </ul>
