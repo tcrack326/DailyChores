@@ -31,15 +31,16 @@
     return {
       link: function ($scope, element, attrs) {
         element.bind('click', function () {
-          console.log(this);
-          //console.log(element.classlist);
-          if ($scope.complete === undefined) {
-            $scope.complete = 'complete';
-            element.addClass('completed');
+
+          if ($scope.chore.complete === undefined || $scope.chore.complete === 'incomplete') {
+            $scope.chore.complete = 'complete';
+            $scope.chore.put();
+
           }
+
           else {
-            $(element).removeClass('completed');
-            $scope.complete = undefined;
+            $scope.chore.complete = 'incomplete';
+            $scope.chore.put();
 
           }
         });
